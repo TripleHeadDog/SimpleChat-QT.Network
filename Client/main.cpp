@@ -7,7 +7,9 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+    MainWindow window;
+    window.setWindowTitle("Simple Chat v0.1");
+
+    window.show();
     return a.exec();
 }

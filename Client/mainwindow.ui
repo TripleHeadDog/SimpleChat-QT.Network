@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>512</width>
-    <height>522</height>
+    <width>511</width>
+    <height>503</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,8 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(24, 24, 24);</string>
+   <string notr="true">background-color: rgb(201, 166, 107);
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="layoutWidget">
@@ -31,44 +32,44 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QPushButton" name="ButtonConnect">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">	background-color: rgb(208, 208, 208);
-	font: 900 12pt &quot;Segoe UI Black&quot;;
-     border-style: outset;
-     border-width: 2px;
-     border-radius: 10px;
-    border-color: rgb(67, 67, 67);
-      font: bold 14px;
-     min-width: 10em;
-     padding: 6px;</string>
-       </property>
-       <property name="text">
-        <string>connect</string>
-       </property>
-       <property name="autoRepeatInterval">
-        <number>100</number>
-       </property>
-       <property name="default">
-        <bool>false</bool>
-       </property>
-       <property name="flat">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
       <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Preferred</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">font: 900 22pt &quot;Segoe UI Black&quot;;
+color: rgb(235, 220, 178);</string>
+         </property>
+         <property name="text">
+          <string>Simple Chat v0.1</string>
+         </property>
+        </widget>
+       </item>
        <item>
         <widget class="QTextBrowser" name="textBrowser">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(208, 208, 208);</string>
+          <string notr="true">
+background-color: rgb(235, 220, 178);
+border-style: outset;
+     border-width: 2px;
+     border-radius: 10px;
+     
+border-color: rgb(102, 46, 28);</string>
          </property>
         </widget>
        </item>
@@ -77,10 +78,10 @@
          <item>
           <widget class="QLineEdit" name="lineEdit">
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(208, 208, 208);
+            <string notr="true">background-color: rgb(235, 220, 178);
 border-style: outset;
      border-width: 2px;
-     border-color: rgb(67, 67, 67);</string>
+     border-color: rgb(102, 46, 28);</string>
            </property>
           </widget>
          </item>
@@ -105,12 +106,16 @@ border-style: outset;
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">	background-color: rgb(208, 208, 208);
+            <string notr="true">color: rgb(175, 68, 37);
+
+background-color: rgb(235, 220, 178);
+
 	font: 900 12pt &quot;Segoe UI Black&quot;;
      border-style: outset;
      border-width: 2px;
      border-radius: 10px;
-     border-color: rgb(67, 67, 67);
+     
+border-color: rgb(102, 46, 28);
       font: bold 14px;
      min-width: 10em;
 
@@ -140,10 +145,10 @@ border-style: outset;
      <item>
       <widget class="QLineEdit" name="LineName">
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(208, 208, 208);
+        <string notr="true">background-color: rgb(235, 220, 178);
 border-style: outset;
      border-width: 2px;
-    border-color: rgb(67, 67, 67);</string>
+    border-color: rgb(102, 46, 28);</string>
        </property>
        <property name="text">
         <string>User</string>
@@ -153,7 +158,8 @@ border-style: outset;
      <item>
       <widget class="QLabel" name="Name">
        <property name="styleSheet">
-        <string notr="true">color: rgb(156, 156, 156);</string>
+        <string notr="true">color: rgb(175, 68, 37);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
        </property>
        <property name="text">
         <string>Ник</string>
@@ -163,24 +169,6 @@ border-style: outset;
     </layout>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>512</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menu">
-    <property name="title">
-     <string>Профиль</string>
-    </property>
-    <addaction name="action"/>
-   </widget>
-   <addaction name="menu"/>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <action name="action">
    <property name="checkable">
     <bool>false</bool>

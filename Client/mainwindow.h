@@ -22,12 +22,13 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_ButtonConnect_clicked();
+   // void on_ButtonConnect_clicked();
 
 
     void on_ButtonSend_clicked();
 
     void on_lineEdit_returnPressed();
+    void Connection_Setup();
 
 
 
@@ -44,8 +45,10 @@ private:
     void SendToServer(QString str);
     quint16 nextBlockSize;
 
+
 public slots:
     void slotReadyRead();
+
 };
 
 

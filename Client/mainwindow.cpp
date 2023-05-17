@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(socket, &QTcpSocket::readyRead, this , &MainWindow::slotReadyRead);
     connect(socket,&QTcpSocket::disconnected, socket, &QTcpSocket::deleteLater);
     nextBlockSize = 0;
-
+    Connection_Setup();
 
 }
 
@@ -23,7 +23,7 @@ MainWindow::~MainWindow()
 }
 
 
-
+/*
 void MainWindow::on_ButtonConnect_clicked()
 {
      socket->connectToHost("178.172.151.205", 2323);
@@ -37,6 +37,26 @@ void MainWindow::on_ButtonConnect_clicked()
     }
 
 }
+*/
+
+void MainWindow::Connection_Setup()
+{
+
+
+          socket->connectToHost("178.172.151.205", 2323);
+          if(socket->waitForConnected(3000))
+          {
+              ui->textBrowser->setText( "Connection Successfully ^_^ ");
+          }
+          else
+          {
+              ui->textBrowser->setText(" Connection Error  -_-");
+          }
+
+
+
+}
+
 
 void MainWindow::SendToServer(QString str)
 {
@@ -45,7 +65,7 @@ void MainWindow::SendToServer(QString str)
     NickName = ui->LineName->text();
     QDataStream out(&Data, QIODevice::WriteOnly);
     out.setVersion(QDataStream::Qt_6_2);
-    out<<quint16(0)<<QTime::currentTime()<<+"["+NickName+"] " + str;
+    out<<quint16(0)<<QTime::currentTime()<<+"  ["+NickName+"]   " + str;
     out.device()->seek(0);
     out<<quint16(Data.size()- sizeof(quint16));
     socket->write(Data);
