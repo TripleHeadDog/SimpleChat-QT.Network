@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>512</width>
+    <height>522</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(24, 24, 24);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>491</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="ButtonConnect">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">	background-color: rgb(208, 208, 208);
+	font: 900 12pt &quot;Segoe UI Black&quot;;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 10px;
+    border-color: rgb(67, 67, 67);
+      font: bold 14px;
+     min-width: 10em;
+     padding: 6px;</string>
+       </property>
+       <property name="text">
+        <string>connect</string>
+       </property>
+       <property name="autoRepeatInterval">
+        <number>100</number>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QTextBrowser" name="textBrowser">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(208, 208, 208);</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLineEdit" name="lineEdit">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(208, 208, 208);
+border-style: outset;
+     border-width: 2px;
+     border-color: rgb(67, 67, 67);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="ButtonSend">
+           <property name="minimumSize">
+            <size>
+             <width>206</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">	background-color: rgb(208, 208, 208);
+	font: 900 12pt &quot;Segoe UI Black&quot;;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 10px;
+     border-color: rgb(67, 67, 67);
+      font: bold 14px;
+     min-width: 10em;
+
+     padding: 6px;</string>
+           </property>
+           <property name="text">
+            <string>отправить</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>167</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLineEdit" name="LineName">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(208, 208, 208);
+border-style: outset;
+     border-width: 2px;
+    border-color: rgb(67, 67, 67);</string>
+       </property>
+       <property name="text">
+        <string>User</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="Name">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(156, 156, 156);</string>
+       </property>
+       <property name="text">
+        <string>Ник</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>512</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Профиль</string>
+    </property>
+    <addaction name="action"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Изменить ник</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
